@@ -21,9 +21,8 @@ Plain HTML and one CSS file. That is the whole thing.
 index.html          Page 1 — Home / Quick Start
 background.html     Page 2 — Background on Cystic Fibrosis
 device.html         Page 3 — How the Device Works       (placeholder)
-cleaning.html       Page 4 — Cleaning, Sanitation & Maintenance
-resources.html      Page 5 — Regional Resources & Support
-downloads.html      Page 6 — Downloads & Patient Toolkit (placeholder)
+resources.html      Page 4 — Regional Resources & Support
+downloads.html      Page 5 — Downloads & Patient Toolkit (placeholder)
 404.html            Not-found page (Cloudflare Pages serves this automatically)
 _headers            Cloudflare Pages security headers + cache policy
 assets/css/style.css
@@ -63,9 +62,9 @@ be blocked.**
 
 - [ ] **Hero banner** on `index.html` — intentionally blank, awaiting copy.
 - [ ] **`device.html`** — needs the device make/model and its manufacturer IFU.
-- [ ] **`cleaning.html`** — sections marked *device-specific*: removable parts list,
-      non-immersible parts, and the real replacement-interval table. The current
-      intervals are generic placeholders, not this device's figures.
+- [ ] **Cleaning guidance** — the dedicated cleaning page was removed. Decide where,
+      if anywhere, cleaning/disinfection/maintenance content should live. The removed
+      page is recoverable from commit `b01ec36` (`git show b01ec36:cleaning.html`).
 - [ ] **`resources.html`** — items marked *verify*: named Indian CF clinics with
       current contact details, and Chinese-language patient-facing resources.
 - [ ] **`downloads.html`** — printables are a proposed shortlist; none built yet.
