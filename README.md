@@ -23,8 +23,8 @@ background.html     Page 2 — Background on Cystic Fibrosis
 device.html         Page 3 — How the Device Works       (placeholder)
 resources.html      Page 4 — Regional Resources & Support
 downloads.html      Page 5 — Downloads & Patient Toolkit (placeholder)
-404.html            Not-found page (Cloudflare Pages serves this automatically)
-_headers            Cloudflare Pages security headers + cache policy
+404.html            Not-found page (GitHub Pages serves this automatically)
+.nojekyll           Tells GitHub Pages to skip Jekyll and publish files as-is
 assets/css/style.css
 assets/img/         (empty — for photographs and illustrations)
 ```
@@ -32,31 +32,67 @@ assets/img/         (empty — for photographs and illustrations)
 ## Local preview
 
 No tooling required — open `index.html` in a browser. For a closer match to
-production (absolute paths, 404 handling), serve the directory:
+production (404 handling), serve the directory:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-## Deploying to Cloudflare Pages
+## Deploying to GitHub Pages
 
-1. Push this repo to GitHub.
-2. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** →
-   **Connect to Git**, and pick the repo.
-3. Build settings:
-   - **Framework preset:** None
-   - **Build command:** *(leave empty)*
-   - **Build output directory:** `/`
-4. Deploy. The site is served at `https://<project-name>.pages.dev`.
+Repo settings → **Pages** → under "Build and deployment" set:
 
-Every push to `main` redeploys automatically.
+- **Source:** Deploy from a branch
+- **Branch:** `main`, folder `/ (root)`
 
-### About `_headers`
+Save, and the first build runs in a minute or two. The site is served at:
 
-Sets a strict Content-Security-Policy that allows only same-origin CSS and
-`data:` images — nothing else, no scripts at all. **If JavaScript, web fonts, or
-external images are ever added, this file must be updated or those resources will
-be blocked.**
+```
+https://lucianoto.github.io/Test-website/
+```
+
+Every push to `main` redeploys automatically. No workflow file is needed —
+this is plain static HTML, so the built-in branch deployment handles it.
+
+**The repo must be public** unless the account has GitHub Pro/Team/Enterprise.
+Pages for private repos is a paid feature.
+
+### Why `.nojekyll`
+
+GitHub Pages runs Jekyll over the repo by default. Jekyll silently skips files
+and folders whose names begin with an underscore, and tries to interpret `{{ }}`
+and `{% %}` in page content as template syntax. Neither is wanted here.
+`.nojekyll` turns all of that off and publishes the files verbatim.
+
+### Security headers
+
+GitHub Pages does not support custom HTTP response headers — there is no
+equivalent of Cloudflare's `_headers` file. As a partial substitute, every page
+carries these in its `<head>`:
+
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+```
+
+The CSP allows only same-origin CSS and `data:` images — no scripts at all.
+**If JavaScript, web fonts, or external images are ever added, this tag must be
+updated in every page or those resources will be blocked.**
+
+What cannot be replicated without real headers: `X-Content-Type-Options`,
+`Permissions-Policy`, and `frame-ancestors` (the meta form of CSP ignores it, so
+clickjacking protection is lost). GitHub Pages does enforce HTTPS and send HSTS
+on `github.io`. For a static site with no scripts, forms, or cookies, the
+practical exposure from the missing headers is small — but it is a real
+difference from the Cloudflare setup.
+
+### Note on paths
+
+`404.html` uses absolute paths prefixed with `/Test-website/`,
+because a GitHub Pages *project* site is served from a subdirectory rather than
+the domain root. All other pages use relative paths and need no prefix.
+**If the repo is renamed, or a custom domain is added, the paths in `404.html`
+must be updated to match.**
 
 ## Still to do
 
