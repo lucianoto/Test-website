@@ -17,14 +17,10 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 3v9"/><path d="M8 21c-2.2 0-3-1.8-3-4 0-3.5 1-6 2.5-7.5C8.2 8.8 9 9.2 9 10.2V17c0 2.2-.8 4-1 4z"/>
-          <path d="M16 21c2.2 0 3-1.8 3-4 0-3.5-1-6-2.5-7.5C15.8 8.8 15 9.2 15 10.2V17c0 2.2.8 4 1 4z"/>
-        </svg>
-      </span>
       <span>CF Device Guide</span>
     </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Main menu">
+    <span class="nav-toggle-ui" aria-hidden="true"><span></span></span>
     <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="background.html" aria-current="page">Background</a>
@@ -169,12 +165,12 @@
           <text x="452" y="251" text-anchor="middle" font-size="15" font-weight="700" class="dg-brand">25%</text>
 
           <!-- outcome 4 -->
-          <rect x="560" y="150" width="150" height="110" rx="10" fill="var(--danger-bg)" stroke="var(--danger-line)"/>
+          <rect x="560" y="150" width="150" height="110" rx="10" fill="var(--red-bg)" stroke="var(--red)"/>
           <circle cx="622" cy="180" r="9" class="dg-danger"/>
           <circle cx="648" cy="180" r="9" class="dg-danger"/>
-          <text x="635" y="212" text-anchor="middle" font-size="13" font-weight="650" fill="var(--danger-ink)">Has CF</text>
-          <text x="635" y="230" text-anchor="middle" font-size="11.5" fill="var(--danger-ink)">two affected copies</text>
-          <text x="635" y="251" text-anchor="middle" font-size="15" font-weight="700" fill="var(--danger-ink)">25%</text>
+          <text x="635" y="212" text-anchor="middle" font-size="13" font-weight="650" fill="var(--red)">Has CF</text>
+          <text x="635" y="230" text-anchor="middle" font-size="11.5" fill="var(--red)">two affected copies</text>
+          <text x="635" y="251" text-anchor="middle" font-size="15" font-weight="700" fill="var(--red)">25%</text>
 
           <!-- legend -->
           <circle cx="222" cy="296" r="7" class="dg-brand-s" stroke="currentColor" stroke-opacity=".3"/>
@@ -325,7 +321,7 @@
           <!-- watery layer (deep) -->
           <rect x="20" y="166" width="300" height="46" class="dg-brand" opacity=".16"/>
           <!-- cilia, upright -->
-          <g stroke="var(--brand)" stroke-width="2.4" stroke-linecap="round" opacity=".85">
+          <g stroke="var(--blue)" stroke-width="2.4" stroke-linecap="round" opacity=".85">
             <path d="M32 212 V170"/><path d="M52 212 V168"/><path d="M72 212 V171"/><path d="M92 212 V167"/>
             <path d="M112 212 V170"/><path d="M132 212 V168"/><path d="M152 212 V171"/><path d="M172 212 V167"/>
             <path d="M192 212 V170"/><path d="M212 212 V168"/><path d="M232 212 V171"/><path d="M252 212 V167"/>
@@ -333,12 +329,12 @@
           </g>
           <!-- epithelium -->
           <rect x="20" y="212" width="300" height="42" rx="4" class="dg-brand" opacity=".3"/>
-          <g stroke="var(--surface)" stroke-width="1.6" opacity=".8">
+          <g stroke="var(--bg)" stroke-width="1.6" opacity=".8">
             <path d="M70 212 V254"/><path d="M120 212 V254"/><path d="M170 212 V254"/>
             <path d="M220 212 V254"/><path d="M270 212 V254"/>
           </g>
           <!-- direction of clearance -->
-          <g stroke="var(--brand)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke="var(--blue)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M232 132 H300"/><path d="M292 125 L300 132 L292 139"/>
           </g>
           <text x="224" y="136" text-anchor="end" font-size="11.5" font-weight="600" class="dg-brand">mucus moves out</text>
@@ -352,8 +348,8 @@
           <text x="40" y="334" font-size="12" class="dg-soft">Airway lining cells</text>
 
           <!-- ===== Panel B: CF ===== -->
-          <rect x="380" y="0" width="340" height="360" rx="12" fill="var(--danger-bg)"/>
-          <text x="400" y="30" font-size="15" font-weight="700" fill="var(--danger-ink)">Airway in cystic fibrosis</text>
+          <rect x="380" y="0" width="340" height="360" rx="12" fill="var(--red-bg)"/>
+          <text x="400" y="30" font-size="15" font-weight="700" fill="var(--red)">Airway in cystic fibrosis</text>
 
           <!-- mucus blanket (thick) -->
           <rect x="400" y="128" width="300" height="70" rx="6" class="dg-soft" opacity=".62"/>
@@ -368,7 +364,7 @@
           <!-- watery layer (shallow) -->
           <rect x="400" y="198" width="300" height="14" class="dg-brand" opacity=".16"/>
           <!-- cilia, flattened -->
-          <g stroke="var(--brand)" stroke-width="2.4" stroke-linecap="round" opacity=".7">
+          <g stroke="var(--blue)" stroke-width="2.4" stroke-linecap="round" opacity=".7">
             <path d="M412 212 C416 204 424 202 430 203"/>
             <path d="M432 212 C436 204 444 202 450 203"/>
             <path d="M452 212 C456 204 464 202 470 203"/>
@@ -386,24 +382,24 @@
           </g>
           <!-- epithelium -->
           <rect x="400" y="212" width="300" height="42" rx="4" class="dg-brand" opacity=".3"/>
-          <g stroke="var(--surface)" stroke-width="1.6" opacity=".8">
+          <g stroke="var(--bg)" stroke-width="1.6" opacity=".8">
             <path d="M450 212 V254"/><path d="M500 212 V254"/><path d="M550 212 V254"/>
             <path d="M600 212 V254"/><path d="M650 212 V254"/>
           </g>
           <!-- stalled -->
-          <g stroke="var(--danger-ink)" stroke-width="2" fill="none" stroke-linecap="round">
+          <g stroke="var(--red)" stroke-width="2" fill="none" stroke-linecap="round">
             <path d="M636 106 H676"/><path d="M660 99 L668 106 L660 113"/>
             <path d="M646 96 L676 116" stroke-width="2.6"/>
           </g>
-          <text x="628" y="110" text-anchor="end" font-size="11.5" font-weight="600" fill="var(--danger-ink)">clearance stalls</text>
+          <text x="628" y="110" text-anchor="end" font-size="11.5" font-weight="600" fill="var(--red)">clearance stalls</text>
 
           <!-- legend -->
           <rect x="400" y="276" width="12" height="12" rx="3" class="dg-soft" opacity=".62"/>
-          <text x="420" y="286" font-size="12" fill="var(--danger-ink)">Thick, sticky, trapped mucus</text>
+          <text x="420" y="286" font-size="12" fill="var(--red)">Thick, sticky, trapped mucus</text>
           <circle cx="406" cy="306" r="6" class="dg-danger"/>
-          <text x="420" y="310" font-size="12" fill="var(--danger-ink)">Bacteria multiplying in the mucus</text>
+          <text x="420" y="310" font-size="12" fill="var(--red)">Bacteria multiplying in the mucus</text>
           <rect x="400" y="324" width="12" height="12" rx="3" class="dg-brand" opacity=".16"/>
-          <text x="420" y="334" font-size="12" fill="var(--danger-ink)">Shallow watery layer — cilia flattened</text>
+          <text x="420" y="334" font-size="12" fill="var(--red)">Shallow watery layer — cilia flattened</text>
         </svg>
         <figcaption>
           <strong>Airway hydration and mucus clearance.</strong> The depth of the watery layer
