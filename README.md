@@ -17,17 +17,24 @@ Plain HTML and one CSS file. That is the whole thing.
 
 ## Files
 
+Each page is a directory containing `index.html`, so URLs have no `.html`
+extension:
+
 ```
-index.html          Page 1 — Home / Quick Start
-background.html     Page 2 — Background on Cystic Fibrosis
-device.html         Page 3 — How the Device Works       (placeholder)
-resources.html      Page 4 — Regional Resources & Support
-downloads.html      Page 5 — Downloads & Patient Toolkit (placeholder)
-404.html            Not-found page (GitHub Pages serves this automatically)
-.nojekyll           Tells GitHub Pages to skip Jekyll and publish files as-is
+index.html                 →  /                Home / Quick Start
+background/index.html      →  /background/     Background on Cystic Fibrosis
+device/index.html          →  /device/         How the Device Works    (placeholder)
+resources/index.html       →  /resources/      Regional Resources & Support
+downloads/index.html       →  /downloads/      Downloads & Patient Toolkit (placeholder)
+404.html                   →  404              Served automatically by GitHub Pages
+.nojekyll                                      Skip Jekyll; publish files as-is
 assets/css/style.css
-assets/img/         (empty — for photographs and illustrations)
+assets/img/                                    (empty — for photographs)
 ```
+
+Requesting `/background` without the trailing slash returns a 301 to
+`/background/`. That is GitHub Pages' behaviour for directory URLs and is not
+configurable — the canonical URL always ends in a slash.
 
 ## Local preview
 
@@ -88,11 +95,17 @@ difference from the Cloudflare setup.
 
 ### Note on paths
 
-`404.html` uses absolute paths prefixed with `/Test-website/`,
-because a GitHub Pages *project* site is served from a subdirectory rather than
-the domain root. All other pages use relative paths and need no prefix.
-**If the repo is renamed, or a custom domain is added, the paths in `404.html`
-must be updated to match.**
+Every page except `404.html` uses **relative** paths — `assets/css/style.css`
+and `background/` from the root page, `../assets/css/style.css` and
+`../background/` from a subdirectory. Because every page sits exactly one level
+deep, `../` is uniform. This survives a repo rename or a move to a custom
+domain with no edits.
+
+`404.html` is the exception and uses absolute paths prefixed with
+`/Test-website/`. It has to: GitHub Pages serves it for *any* unmatched URL at
+any depth, so a relative path would resolve differently depending on what the
+visitor mistyped. **If the repo is renamed or a custom domain is added, the
+paths in `404.html` are the only ones that must be updated.**
 
 ## Still to do
 
