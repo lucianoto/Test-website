@@ -11,31 +11,39 @@
 /* --- Design tokens ------------------------------------------------------- */
 
 :root {
-  --bg:      #ffffff;
-  --bg-2:    #f2f2f0;
-  --bg-3:    #e6e6e3;
+  --bg:      #f8fafc;   /* cool slate paper */
+  --bg-2:    #eaeff5;
+  --bg-3:    #dae2ec;
 
-  --ink:     #0a0a0a;
-  --ink-2:   #494947;
-  --ink-3:   #787874;
+  --ink:     #0c1420;   /* slate-black */
+  --ink-2:   #46566b;
+  --ink-3:   #74839a;
 
-  --rule:    #0a0a0a;
-  --rule-2:  #d2d2ce;
+  --rule:    #0c1420;
+  --rule-2:  #cbd5e1;
 
-  --blue:    #0033cc;
-  --blue-2:  #002499;
-  --blue-bg: #eef2ff;
+  --blue:    #3730a3;   /* deep indigo — the structural colour */
+  --blue-2:  #292373;
+  --blue-bg: #eaeaff;
 
-  --red:     #c50000;
-  --red-bg:  #fff0ef;
+  --red:     #be123c;   /* rose-red, kept clear of the indigo family */
+  --red-bg:  #ffecf0;
 
-  --amber:   #8a5a00;
-  --amber-bg:#fff6e2;
+  --amber:   #92610b;
+  --amber-bg:#fdf3dc;
 
-  --green:   #1c6b3a;
-  --green-bg:#eef8f1;
+  --green:   #0f766e;
+  --green-bg:#e6f5f3;
 
   --on-fill: #ffffff;
+
+  /* Solid fills (table headers, step numbers, active nav, heavy rules).
+     Previously pure --ink, which is what made the page read as austere. */
+  --fill:    #3730a3;
+  --fill-on: #ffffff;
+
+  /* Highlight for small labels — eyebrows, tags, card links. */
+  --accent:  #7c3aed;   /* violet */
 
   --sans: "Helvetica Neue", Helvetica, Inter, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -48,31 +56,37 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:      #0d0d0d;
-    --bg-2:    #191919;
-    --bg-3:    #242422;
+    --bg:      #0b1017;
+    --bg-2:    #151d28;
+    --bg-3:    #1f2937;
 
-    --ink:     #f0f0ee;
-    --ink-2:   #b0b0ac;
-    --ink-3:   #8a8a86;
+    --ink:     #e9eef6;
+    --ink-2:   #a5b4c8;
+    --ink-3:   #7d8ca2;
 
-    --rule:    #f0f0ee;
-    --rule-2:  #3a3a37;
+    --rule:    #e9eef6;
+    --rule-2:  #2c3947;
 
-    --blue:    #7d9bff;
-    --blue-2:  #a3b8ff;
-    --blue-bg: #131c33;
+    --blue:    #8b8cf7;
+    --blue-2:  #adaefb;
+    --blue-bg: #171733;
 
-    --red:     #ff6f63;
-    --red-bg:  #2a1412;
+    --red:     #fb7185;
+    --red-bg:  #2b1119;
 
-    --amber:   #e0b055;
-    --amber-bg:#261d0c;
+    --amber:   #e2b25c;
+    --amber-bg:#291f0d;
 
-    --green:   #6cc48c;
-    --green-bg:#0f2417;
+    --green:   #5eccc0;
+    --green-bg:#0d2320;
 
-    --on-fill: #0d0d0d;
+    --on-fill: #0b1017;
+
+    /* Fills invert: a light indigo block with dark text on dark ground. */
+    --fill:    #8b8cf7;
+    --fill-on: #0b1017;
+
+    --accent:  #b794ff;
   }
 }
 
@@ -143,7 +157,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 .skip-link {
   position: absolute; left: 0; top: -4rem; z-index: 100;
   padding: .7rem 1.1rem;
-  background: var(--ink); color: var(--bg);
+  background: var(--fill); color: var(--fill-on);
   font-size: .78rem; font-weight: 700;
   letter-spacing: .1em; text-transform: uppercase;
   transition: top .12s ease;
@@ -185,7 +199,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
   white-space: nowrap;
 }
 .site-nav a:hover { background: var(--bg-2); color: var(--ink); text-decoration: none; }
-.site-nav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.site-nav a[aria-current="page"] { background: var(--fill); color: var(--fill-on); }
 
 /* --- Mobile menu: CSS-only disclosure ------------------------------------ */
 /* The checkbox is the real control — visually transparent but focusable and
@@ -265,7 +279,7 @@ main { display: block; padding-bottom: 5rem; }
 .hero .lede {
   font-size: 1.12rem; color: var(--ink-2);
   max-width: 44ch;
-  border-left: 3px solid var(--blue); padding-left: 1rem;
+  border-left: 3px solid var(--accent); padding-left: 1rem;
 }
 
 .page-head {
@@ -277,19 +291,19 @@ main { display: block; padding-bottom: 5rem; }
 .page-head p.lede {
   font-size: 1.12rem; color: var(--ink-2); max-width: 46ch;
   margin-bottom: 0;
-  border-left: 3px solid var(--blue); padding-left: 1rem;
+  border-left: 3px solid var(--accent); padding-left: 1rem;
 }
 
 .eyebrow {
   display: block;
   font-size: .72rem; font-weight: 700;
   letter-spacing: .16em; text-transform: uppercase;
-  color: var(--blue);
+  color: var(--accent);
   margin-bottom: 1.25rem;
 }
 
 section { scroll-margin-top: calc(var(--bar) + 1rem); padding-top: 3.25rem; }
-section > h2 { padding-top: .9rem; border-top: 3px solid var(--ink); max-width: 22ch; }
+section > h2 { padding-top: .9rem; border-top: 3px solid var(--fill); max-width: 22ch; }
 
 /* --- Cards: a hard grid of bordered cells -------------------------------- */
 
@@ -325,7 +339,7 @@ a.card:hover h3 { color: var(--on-fill); }
 }
 .card h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
 .card p { margin: 0; font-size: .88rem; line-height: 1.45; color: var(--ink-2); max-width: none; }
-.card__go { margin-top: auto; padding-top: 1.1rem; font-size: .8rem; font-weight: 700; color: var(--blue); }
+.card__go { margin-top: auto; padding-top: 1.1rem; font-size: .8rem; font-weight: 700; color: var(--accent); }
 
 /* --- Steps: number in a filled block ------------------------------------- */
 
@@ -341,7 +355,7 @@ a.card:hover h3 { color: var(--on-fill); }
   position: absolute; left: 0; top: .1rem;
   width: 2.4rem; height: 1.55rem;
   display: flex; align-items: center; justify-content: center;
-  background: var(--ink); color: var(--bg);
+  background: var(--fill); color: var(--fill-on);
   font-size: .76rem; font-weight: 700; letter-spacing: .04em;
   font-variant-numeric: tabular-nums;
 }
@@ -389,9 +403,9 @@ a.card:hover h3 { color: var(--on-fill); }
 .clinical > summary::before {
   content: ""; width: .6rem; height: .6rem; flex: none; background: var(--blue);
 }
-.clinical[open] > summary::before { background: var(--ink); }
-.clinical > summary:hover { background: var(--ink); color: var(--bg); }
-.clinical > summary:hover::before { background: var(--bg); }
+.clinical[open] > summary::before { background: var(--fill); }
+.clinical > summary:hover { background: var(--fill); color: var(--fill-on); }
+.clinical > summary:hover::before { background: var(--fill-on); }
 .clinical__body { padding: 1.15rem 1rem .2rem; border-top: 1px solid var(--rule); }
 .clinical__body p, .clinical__body li { font-size: .95rem; color: var(--ink-2); }
 .clinical__body > :last-child { margin-bottom: 0; padding-bottom: .9rem; }
@@ -409,7 +423,7 @@ caption {
 thead th {
   font-size: .68rem; font-weight: 700;
   letter-spacing: .1em; text-transform: uppercase;
-  background: var(--ink); color: var(--bg);
+  background: var(--fill); color: var(--fill-on);
   padding: .55rem .85rem; text-align: left;
   white-space: nowrap; vertical-align: bottom;
 }
@@ -457,14 +471,14 @@ figcaption {
 .placeholder__tag {
   display: inline-block; margin-bottom: .9rem;
   padding: .25rem .6rem;
-  background: var(--amber); color: var(--on-fill);
+  background: var(--accent); color: var(--fill-on);
   font-size: .66rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
 }
 
 /* --- Regions (resources page) -------------------------------------------- */
 
-.region { margin: 2.5rem 0; padding: 0 0 1.5rem; border-top: 3px solid var(--ink); }
+.region { margin: 2.5rem 0; padding: 0 0 1.5rem; border-top: 3px solid var(--fill); }
 .region > h2 {
   padding-top: .9rem; border-top: 0; margin-bottom: 1rem;
   display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap;
@@ -507,7 +521,7 @@ a[rel~="external"]::after { content: " ↗"; font-size: .78em; color: var(--ink-
 /* --- Footer -------------------------------------------------------------- */
 
 .site-footer {
-  border-top: 3px solid var(--ink);
+  border-top: 3px solid var(--fill);
   background: var(--bg);
   padding: 2.25rem 0 3rem;
   font-size: .88rem; color: var(--ink-2);
@@ -543,6 +557,7 @@ a[rel~="external"]::after { content: " ↗"; font-size: .78em; color: var(--ink-
   :root {
     --bg: #fff; --bg-2: #fff; --ink: #000; --ink-2: #222; --ink-3: #555;
     --rule: #000; --rule-2: #999; --blue: #00c; --on-fill: #fff;
+    --fill: #000; --fill-on: #fff; --accent: #000;
   }
   .site-header, .skip-link, .card__go, .nav-toggle, .nav-toggle-ui { display: none !important; }
   body { background: #fff; color: #000; font-size: 10.5pt; }
