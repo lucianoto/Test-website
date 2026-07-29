@@ -639,8 +639,22 @@ a[rel~="external"]::after { content: " ↗"; font-size: .78em; color: var(--ink-
   letter-spacing: .14em; text-transform: uppercase;
   border-top: 0; padding-top: 0; margin-bottom: .9rem;
 }
-.sources ol { padding-left: 1.2rem; }
-.sources li { margin-bottom: .45rem; }
+.sources ol { padding-left: 1.6rem; }
+.sources li { margin-bottom: .6rem; scroll-margin-top: calc(var(--bar) + 1rem); }
+.sources li:target { background: var(--blue-bg); outline: 3px solid var(--blue-bg); }
+
+/* Inline reference markers, linking down to the numbered source list. */
+.ref {
+  font-size: .68em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: super;
+  white-space: nowrap;
+}
+.ref a { text-decoration: none; padding: 0 .08em; }
+.ref a:hover { text-decoration: underline; }
+/* Consecutive markers need separating, or "3" then "2" reads as "32". */
+.ref + .ref::before { content: ","; color: var(--ink-3); }
 
 /* --- Footer -------------------------------------------------------------- */
 
