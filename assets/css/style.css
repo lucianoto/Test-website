@@ -282,6 +282,87 @@ main { display: block; padding-bottom: 5rem; }
   border-left: 3px solid var(--accent); padding-left: 1rem;
 }
 
+/* Hero lockup: title, tagline, attribution, and a reserved photo slot. */
+.hero__inner--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 54rem) {
+  .hero__inner--split { grid-template-columns: 1.15fr .85fr; gap: 3rem; }
+}
+
+.hero__title {
+  font-size: clamp(2.75rem, 1.4rem + 6vw, 5.5rem);
+  letter-spacing: -.04em;
+  line-height: .95;
+  margin: 0 0 .75rem;
+}
+.hero__tagline {
+  font-size: clamp(1.05rem, .95rem + .55vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink-2);
+  max-width: 28ch;
+  margin: 0 0 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+.hero__credit {
+  font-size: .78rem;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  color: var(--ink-3);
+  max-width: 42ch;
+  margin: 0;
+}
+
+/* Development-status flag. The device is a research prototype, so this must
+   stay visible wherever the device is described. */
+.status-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0 0 1.5rem;
+  padding: .45rem .75rem;
+  background: var(--amber-bg);
+  border-left: 4px solid var(--amber);
+  color: var(--amber);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  max-width: none;
+}
+.status-flag::before {
+  content: "";
+  width: .5rem; height: .5rem; flex: none;
+  background: var(--amber);
+  border-radius: 50%;
+}
+
+/* Reserved space for the device photograph. Replace .hero__media entirely
+   with <img src="assets/img/…" alt="…"> when the photo is available. */
+.hero__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  aspect-ratio: 4 / 3;
+  padding: 1.5rem;
+  border: 1px dashed var(--ink-3);
+  background: var(--bg-2);
+  text-align: center;
+}
+.hero__media span {
+  font-size: .7rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.hero__media small { font-size: .8rem; color: var(--ink-3); max-width: 30ch; }
+
 .page-head {
   padding: 3.5rem 0 2rem;
   border-bottom: 1px solid var(--rule);
@@ -309,8 +390,24 @@ section > h2 { padding-top: .9rem; border-top: 3px solid var(--fill); max-width:
 
 .card-grid {
   list-style: none; margin: 1.75rem 0 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   border-top: 1px solid var(--rule); border-left: 1px solid var(--rule);
+}
+
+/* Because the cards are hard-bordered, a part-filled final row reads as a
+   missing cell rather than as whitespace. On a six-column base every row holds
+   three cards; where the count would leave a short last row, those cards widen
+   to close it. Counts that need help: 2, 5 and 8. */
+@media (min-width: 58rem) {
+  .card-grid--fill { grid-template-columns: repeat(6, 1fr); }
+  .card-grid--fill > li { grid-column: span 2; }
+
+  .card-grid--fill > li:first-child:nth-last-child(2),
+  .card-grid--fill > li:first-child:nth-last-child(2) ~ li,
+  .card-grid--fill > li:first-child:nth-last-child(5) ~ li:nth-child(n+4),
+  .card-grid--fill > li:first-child:nth-last-child(8) ~ li:nth-child(n+7) {
+    grid-column: span 3;
+  }
 }
 .card-grid li {
   max-width: none; margin: 0;

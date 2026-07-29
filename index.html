@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Home — CF Device Guide</title>
-<meta name="description" content="An instructional guide to using a cystic fibrosis medical device: background on CF, how the device works, and regional support resources.">
+<title>Home — CF Device</title>
+<meta name="description" content="CF Device — a transdermal patch for cystic fibrosis sweat testing and drug delivery, under development at the Georgetown Nanoscience and Microtechnology Laboratory (GNuLab). Research prototype; not approved for clinical use.">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫁</text></svg>">
 </head>
@@ -17,7 +17,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="./">
-      <span>CF Device Guide</span>
+      <span>CF Device</span>
     </a>
     <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Main menu">
     <span class="nav-toggle-ui" aria-hidden="true"><span></span></span>
@@ -25,6 +25,7 @@
       <a href="./" aria-current="page">Home</a>
       <a href="background/">Background</a>
       <a href="device/">Device Guide</a>
+      <a href="treatment/">Treatment</a>
       <a href="resources/">Resources</a>
       <a href="downloads/">Downloads</a>
     </nav>
@@ -34,19 +35,22 @@
 <main id="main">
 
   <!-- ===================================================================
-       HERO BANNER — intentionally left blank.
-       Replace the .placeholder block below with the real hero copy:
-       an <h1>, a short reassuring lede, and (optionally) a device photo.
+       HERO BANNER
+       The .hero__media block is a reserved slot — replace it wholesale
+       with <img src="assets/img/…" alt="…"> once the photograph exists.
        =================================================================== -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero__inner">
-      <h1 id="hero-heading" class="visually-hidden">CF Device Guide</h1>
-      <div class="placeholder">
-        <span class="placeholder__tag">Hero banner — to be written</span>
-        <h3>Device name and one-line purpose go here</h3>
-        <p>Two or three reassuring sentences: what the device is, what it does for
-          cystic fibrosis management, and who it is for. A device photograph sits
-          well to the right of this text.</p>
+    <div class="hero__inner hero__inner--split">
+      <div>
+        <h1 id="hero-heading" class="hero__title">CF Device</h1>
+        <p class="hero__tagline">Redefining how cystic fibrosis is detected</p>
+        <p class="status-flag">In development — not approved for clinical use</p>
+        <p class="hero__credit">Created by The Georgetown Nanoscience and
+          Microtechnology Laboratory (GNuLab)</p>
+      </div>
+      <div class="hero__media">
+        <span>Photograph</span>
+        <small>Reserved space for a photograph of the device.</small>
       </div>
     </div>
   </section>
@@ -60,7 +64,7 @@
       <h2 id="hub-heading">Where would you like to start?</h2>
       <p class="text-soft">Each section stands on its own — you do not have to read them in order.</p>
 
-      <ul class="card-grid">
+      <ul class="card-grid card-grid--fill">
         <li>
           <a class="card" href="background/">
             <span class="card__num">Section 1</span>
@@ -74,14 +78,23 @@
           <a class="card" href="device/">
             <span class="card__num">Section 2</span>
             <h3>How the Device Works</h3>
-            <p>Parts, assembly, and step-by-step instructions for a treatment session.</p>
+            <p>Sweat tests, drug delivery, and step-by-step descriptions of patch mechanics.</p>
             <span class="card__go">Open the device guide →</span>
           </a>
         </li>
 
         <li>
-          <a class="card" href="resources/">
+          <a class="card" href="treatment/">
             <span class="card__num">Section 3</span>
+            <h3>Treatment</h3>
+            <p>What happens after diagnosis: treatment options, daily routines, and what the patch could change.</p>
+            <span class="card__go">Explore treatment →</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="card" href="resources/">
+            <span class="card__num">Section 4</span>
             <h3>Regional Resources &amp; Support</h3>
             <p>Care centres, patient groups, and clinical guidance for India, China, and worldwide.</p>
             <span class="card__go">Find support near you →</span>
@@ -90,9 +103,9 @@
 
         <li>
           <a class="card" href="downloads/">
-            <span class="card__num">Section 4</span>
+            <span class="card__num">Section 5</span>
             <h3>Downloads &amp; Patient Toolkit</h3>
-            <p>Printable checklists, schedules, and reference sheets to keep near the device.</p>
+            <p>Printable infographics about CF, the patch, treatment options, and regional resources.</p>
             <span class="card__go">Get the printables →</span>
           </a>
         </li>
@@ -100,71 +113,28 @@
     </section>
 
     <!-- =================================================================
-         QUICK START
+         ABOUT THE GNuLab
          ================================================================= -->
-    <section aria-labelledby="quickstart-heading">
-      <h2 id="quickstart-heading">Quick start</h2>
-      <p>If you have just been given this device and want the short version, this is it.
-        Every step is covered in more detail in the sections above.</p>
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About the GNuLab</h2>
 
-      <ol class="steps">
-        <li>
-          <h3>Wash your hands</h3>
-          <p>Soap and water for at least 20&nbsp;seconds before you touch any part of the
-            device. This is the single most effective step for preventing lung infection.</p>
-        </li>
-        <li>
-          <h3>Check the parts are clean and dry</h3>
-          <p>Any moisture left inside a device is somewhere bacteria can grow. If a part
-            is damp, cracked, cloudy, or discoloured, do not use it.</p>
-        </li>
-        <li>
-          <h3>Assemble and run your treatment</h3>
-          <p>Follow the sequence your care team gave you — the order of inhaled medicines
-            and airway clearance matters.
-            <a href="device/">See the device guide</a>.</p>
-        </li>
-        <li>
-          <h3>Take the device apart and wash it right away</h3>
-          <p>Rinse and wash after <em>every</em> use, then disinfect on the schedule your
-            manufacturer specifies. Follow the cleaning instructions supplied with your device.</p>
-        </li>
-        <li>
-          <h3>Air-dry completely, then store covered</h3>
-          <p>Never towel-dry with cloth, and never store parts while still damp.</p>
-        </li>
-      </ol>
+      <p>The Georgetown Nanoscience and Microtechnology Laboratory (GNuLab) — also known as
+        the Paranjape Lab — is directed by Makarand (Mak) Paranjape, Associate Professor of
+        Physics. The laboratory engineers functional microscale sensors, non-invasive
+        transdermal diagnostic patches, and biomedical microdevices.</p>
 
-      <div class="callout callout--warn">
-        <span class="callout__title">Never share equipment</span>
-        <p>Devices, mouthpieces, masks, and tubing must never be shared between people —
-          including between family members who both have CF. Sharing is a direct route for
-          transmitting <em>Pseudomonas aeruginosa</em>, <em>Burkholderia cepacia</em>
-          complex, and other organisms that are difficult to eradicate once established.</p>
-      </div>
-    </section>
+      <p>GNuLab is a 3,300-square-foot shared-use clean room in the Department of Physics in
+        Regents Hall, equipped with instrumentation for the fabrication and characterisation
+        of materials and electronic devices. It is open to researchers across the Georgetown
+        University Main Campus and Medical Center as well as to external collaborators, who
+        are trained and supported in their work by Dr.&nbsp;Jasper Nijdam.</p>
 
-    <!-- =================================================================
-         WHEN TO SEEK HELP
-         ================================================================= -->
-    <section aria-labelledby="help-heading">
-      <h2 id="help-heading">When to contact your care team</h2>
-      <p>This site does not replace your CF centre. Contact them promptly if you notice:</p>
-      <ul>
-        <li>More coughing than usual, or a change in the colour, thickness, or amount of sputum</li>
-        <li>New or worsening breathlessness, chest tightness, or wheeze</li>
-        <li>Fever, unusual tiredness, loss of appetite, or unexplained weight loss</li>
-        <li>Coughing up blood</li>
-        <li>A drop in your home lung-function readings, if you track them</li>
-        <li>Visible mould, film, or a persistent smell in device parts that cleaning does not remove</li>
-      </ul>
-
-      <div class="callout callout--danger">
-        <span class="callout__title">Emergency</span>
-        <p>Severe breathing difficulty, coughing up a large volume of blood, or chest pain
-          with breathlessness needs emergency care immediately — do not wait for a clinic
-          appointment.</p>
-      </div>
+      <p>Projects in the lab are led by faculty research groups and carried out by
+        postdoctoral fellows alongside graduate, undergraduate, and high-school students.
+        Current work spans condensed matter and materials science — biodegradable polymers,
+        two-dimensional nanomaterials, and atomic layer deposition of new materials —
+        biomedical devices including glucose sensors, neural probes, and MRI contrast agents,
+        and carbon nanotube sensors for gas monitoring and diabetes.</p>
     </section>
 
   </div>
@@ -173,15 +143,17 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="disclaimer">
-      <p><strong>Medical disclaimer.</strong> This guide is educational and does not replace
-        advice from your cystic fibrosis care team, or the instructions supplied by the
-        device manufacturer. Where this site and your manufacturer's instructions differ,
-        follow the manufacturer. Always confirm changes to your treatment or cleaning
-        routine with your clinician.</p>
+      <p><strong>Medical disclaimer.</strong> This site is educational and does not replace
+        advice from your cystic fibrosis care team. The device described here is a research
+        prototype under development: it is not approved for clinical use, is not available to
+        patients, and must not be used to diagnose or treat cystic fibrosis. Always confirm
+        changes to your treatment with your care team.</p>
     </div>
     <p class="footer-note">
-      <strong>CF Device Guide</strong> — a static, no-tracking information site.
-      Last reviewed: <time datetime="2026-07-27">27 July 2026</time>.
+      <strong>CF Device</strong> — a static, no-tracking information site.
+      Created by the Georgetown Nanoscience and Microtechnology Laboratory (GNuLab),
+      Department of Physics, Georgetown University.
+      Last reviewed: <time datetime="2026-07-28">28 July 2026</time>.
     </p>
   </div>
 </footer>
