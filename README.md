@@ -21,11 +21,12 @@ Each page is a directory containing `index.html`, so URLs have no `.html`
 extension:
 
 ```
-index.html                 →  /                Home / Quick Start
+index.html                 →  /                Home
 background/index.html      →  /background/     Background on Cystic Fibrosis
+misdiagnosis/index.html    →  /misdiagnosis/   Misdiagnosis of CF in India
 device/index.html          →  /device/         How the Device Works    (placeholder)
+treatment/index.html       →  /treatment/      Treatment
 resources/index.html       →  /resources/      Regional Resources & Support
-downloads/index.html       →  /downloads/      Downloads & Patient Toolkit (placeholder)
 404.html                   →  404              Served automatically by GitHub Pages
 .nojekyll                                      Skip Jekyll; publish files as-is
 assets/css/style.css
@@ -109,20 +110,33 @@ paths in `404.html` are the only ones that must be updated.**
 
 ## Still to do
 
-- [ ] **Hero banner** on `index.html` — intentionally blank, awaiting copy.
-- [ ] **`device.html`** — needs the device make/model and its manufacturer IFU.
-- [ ] **Cleaning guidance** — the dedicated cleaning page was removed. Decide where,
-      if anywhere, cleaning/disinfection/maintenance content should live. The removed
-      page is recoverable from commit `b01ec36` (`git show b01ec36:cleaning.html`).
-- [ ] **`resources.html`** — items marked *verify*: named Indian CF clinics with
-      current contact details, and Chinese-language patient-facing resources.
-- [ ] **`downloads.html`** — printables are a proposed shortlist; none built yet.
-- [ ] **Site name** — currently the placeholder "CF Device Guide", used in the
-      header, `<title>` of each page, and footer.
-- [ ] **Images** — `assets/img/` is empty. The two SVG diagrams in `background.html`
-      are original; any photographs or anatomical illustrations must be sourced
-      under a licence permitting reuse, with attribution.
+- [ ] **`device/`** — the only page still without content. Needs the patch's
+      technical description, wear protocol, and validation data. Everything below
+      the development-status callout was cleared for rewriting.
+- [ ] **Regulatory wording** — the site says "not approved for clinical use". If the
+      device is under an FDA Investigational Device Exemption, the required label is
+      more specific: "CAUTION — Investigational device. Limited by Federal law to
+      investigational use." Confirm with whoever handles regulatory at GNuLab.
 - [ ] **Clinical review** — no page on this site has been reviewed by a clinician.
+      Most important for `treatment/`, which a reader might act on.
+- [ ] **Images** — `assets/img/` is empty. Three reserved slots await files: the hero
+      photograph on `index.html` and two on `background/`. The SVG diagrams in
+      `background/` are original; any photographs must be licensed for reuse.
+- [ ] **`resources/`** — still missing named Indian CF clinics with current contact
+      details, and Chinese-language patient-facing resources.
+- [ ] **Content overlap** — TB misattribution, mutation spectrum, and genetic panel
+      limits are covered on `misdiagnosis/`, `resources/`, and `background/`. Decide
+      whether `resources/` should shed its clinical context and be purely a directory.
+- [ ] **Symbol removal** — a pass to strip logos, emojis, and symbols was started and
+      deferred. Outstanding: the lungs emoji favicon on every page, the arrows in
+      `.card__go` links and the `a[rel~="external"]` rule, the middle dot in the
+      inheritance diagram, and three CSS-drawn marks (hamburger bars, the clinical
+      disclosure square, the status-flag dot). Undecided: whether the arrows inside
+      the SVG diagrams count, since they carry meaning.
+- [ ] **Cleaning guidance** — the dedicated cleaning page was removed early on.
+      Recoverable from commit `b01ec36` (`git show b01ec36:cleaning.html`).
+- [ ] **Repo name** — still `Test-website`, which appears in the public URL. Renaming
+      requires updating the absolute paths in `404.html`.
 
 ## Content notes
 

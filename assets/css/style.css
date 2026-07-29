@@ -191,7 +191,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 .site-nav { display: flex; flex-wrap: wrap; margin-left: auto; }
 .site-nav a {
   display: flex; align-items: center;
-  padding: 1rem .9rem;
+  padding: 1rem .75rem;
   font-size: .76rem; font-weight: 500;
   letter-spacing: .08em; text-transform: uppercase;
   color: var(--ink-2);
@@ -237,7 +237,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 .nav-toggle-ui span::before { top: -6px; }
 .nav-toggle-ui span::after  { top:  6px; }
 
-@media (max-width: 50rem) {
+@media (max-width: 56rem) {
   .site-header__inner { padding-right: 0; }
   .brand { padding-right: var(--bar); height: var(--bar); }
 
