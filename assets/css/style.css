@@ -1,8 +1,9 @@
 /* ==========================================================================
-   CF Device Guide — "Signal"
+   CF-ARIA — "Signal"
    Swiss/utilitarian. Grotesk type, zero radius, 1px rules, a visible grid,
-   high typographic contrast. Blue is structural; red is reserved exclusively
-   for warnings so it keeps its meaning.
+   high typographic contrast. Palette drawn from the CF-ARIA logo: the
+   wordmark navy carries structure, the helix green picks out small labels,
+   and red is reserved exclusively for warnings so it keeps its meaning.
 
    No JavaScript anywhere in this project. The mobile menu is a CSS-only
    disclosure driven by a visually-hidden checkbox.
@@ -22,9 +23,9 @@
   --rule:    #0c1420;
   --rule-2:  #cbd5e1;
 
-  --blue:    #3730a3;   /* deep indigo — the structural colour */
-  --blue-2:  #292373;
-  --blue-bg: #eaeaff;
+  --blue:    #1c477d;   /* logo wordmark navy — the structural colour */
+  --blue-2:  #13416f;
+  --blue-bg: #e8eff7;
 
   --red:     #be123c;   /* rose-red, kept clear of the indigo family */
   --red-bg:  #ffecf0;
@@ -39,11 +40,13 @@
 
   /* Solid fills (table headers, step numbers, active nav, heavy rules).
      Previously pure --ink, which is what made the page read as austere. */
-  --fill:    #3730a3;
+  --fill:    #1c477d;
   --fill-on: #ffffff;
 
-  /* Highlight for small labels — eyebrows, tags, card links. */
-  --accent:  #7c3aed;   /* violet */
+  /* Highlight for small labels — eyebrows, tags, card links. The logo's own
+     green (#69a157) is only 2.9:1 against the page and fails WCAG AA as text,
+     so this is the same hue darkened until it passes. */
+  --accent:  #2f7355;   /* logo helix green, darkened */
 
   --sans: "Helvetica Neue", Helvetica, Inter, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -67,9 +70,9 @@
     --rule:    #e9eef6;
     --rule-2:  #2c3947;
 
-    --blue:    #8b8cf7;
-    --blue-2:  #adaefb;
-    --blue-bg: #171733;
+    --blue:    #7fb3dd;
+    --blue-2:  #a5cbe9;
+    --blue-bg: #12233a;
 
     --red:     #fb7185;
     --red-bg:  #2b1119;
@@ -82,11 +85,11 @@
 
     --on-fill: #0b1017;
 
-    /* Fills invert: a light indigo block with dark text on dark ground. */
-    --fill:    #8b8cf7;
+    /* Fills invert: a light navy block with dark text on dark ground. */
+    --fill:    #7fb3dd;
     --fill-on: #0b1017;
 
-    --accent:  #b794ff;
+    --accent:  #6fc79a;
   }
 }
 
