@@ -309,6 +309,33 @@ main { display: block; padding-bottom: 5rem; }
   padding-left: 1rem;
   border-left: 3px solid var(--accent);
 }
+/* Capped at the file's native 219px so it is never upscaled. */
+.hero__logo {
+  display: block;
+  width: 100%;
+  max-width: 219px;
+  height: auto;
+}
+
+/* Footer lockup: logo beside the colophon, stacking on narrow screens. */
+.footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+.footer-logo {
+  flex: none;
+  width: 132px;
+  height: auto;
+  display: block;
+  padding: .5rem;
+  background: #ffffff;
+  border: 1px solid var(--rule-2);
+}
+.footer-brand .footer-note { margin-top: 0; flex: 1 1 20rem; }
+
 .hero__credit {
   font-size: .78rem;
   line-height: 1.5;
@@ -346,22 +373,12 @@ main { display: block; padding-bottom: 5rem; }
    with <img src="assets/img/…" alt="…"> when the photo is available. */
 .hero__media {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
-  aspect-ratio: 4 / 3;
-  padding: 1.5rem;
-  border: 1px dashed var(--ink-3);
-  background: var(--bg-2);
-  text-align: center;
+  padding: 2.5rem;
+  border: 1px solid var(--rule-2);
+  background: #ffffff;
 }
-.hero__media span {
-  font-size: .7rem; font-weight: 700;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--ink-3);
-}
-.hero__media small { font-size: .8rem; color: var(--ink-3); max-width: 30ch; }
 
 .page-head {
   padding: 3.5rem 0 2rem;
@@ -625,7 +642,6 @@ figcaption {
   display: block; font-size: .89rem; color: var(--ink-2);
   margin-top: .25rem; max-width: 64ch; line-height: 1.5;
 }
-a[rel~="external"]::after { content: " ↗"; font-size: .78em; color: var(--ink-3); }
 
 /* --- Sources ------------------------------------------------------------- */
 
@@ -697,7 +713,8 @@ a[rel~="external"]::after { content: " ↗"; font-size: .78em; color: var(--ink-
     --rule: #000; --rule-2: #999; --blue: #00c; --on-fill: #fff;
     --fill: #000; --fill-on: #fff; --accent: #000;
   }
-  .site-header, .skip-link, .card__go, .nav-toggle, .nav-toggle-ui { display: none !important; }
+  .site-header, .skip-link, .card__go, .nav-toggle, .nav-toggle-ui,
+  .footer-logo { display: none !important; }
   body { background: #fff; color: #000; font-size: 10.5pt; }
   .card-grid li, figure, .table-scroll, .callout, .clinical, .region { break-inside: avoid; }
   .clinical > summary { background: none; color: #000; }

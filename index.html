@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Home — CF Device</title>
-<meta name="description" content="CF Device — a transdermal patch for cystic fibrosis sweat testing and drug delivery, under development at the Georgetown Nanoscience and Microtechnology Laboratory (GNuLab). Research prototype; not approved for clinical use.">
+<title>Home — CF-ARIA</title>
+<meta name="description" content="CF-ARIA — a transdermal patch for cystic fibrosis sweat testing and drug delivery, under development at the Georgetown Nanoscience and Microtechnology Laboratory (GNuLab). Research prototype; not approved for clinical use.">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫁</text></svg>">
 </head>
@@ -17,15 +17,15 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="./">
-      <span>CF Device</span>
+      <span>CF-ARIA</span>
     </a>
     <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Main menu">
     <span class="nav-toggle-ui" aria-hidden="true"><span></span></span>
     <nav class="site-nav" aria-label="Main">
       <a href="./" aria-current="page">Home</a>
       <a href="background/">Background</a>
-      <a href="misdiagnosis/">Misdiagnosis</a>
-      <a href="device/">CF Device</a>
+      <a href="missed-diagnosis/">Missed Diagnosis</a>
+      <a href="device/">CF-ARIA</a>
       <a href="treatment/">Treatment</a>
       <a href="resources/">Resources</a>
     </nav>
@@ -42,15 +42,15 @@
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero__inner hero__inner--split">
       <div>
-        <h1 id="hero-heading" class="hero__title">CF Device</h1>
+        <h1 id="hero-heading" class="hero__title">CF-ARIA</h1>
         <p class="hero__tagline">Redefining how cystic fibrosis is detected</p>
         <p class="status-flag">In development — not approved for clinical use</p>
         <p class="hero__credit">Created by The Georgetown Nanoscience and
           Microtechnology Laboratory (GNuLab)</p>
       </div>
       <div class="hero__media">
-        <span>Photograph</span>
-        <small>Reserved space for a photograph of the device.</small>
+        <img class="hero__logo" src="assets/img/cf-aria.png" width="219" height="168"
+             alt="CF-ARIA: Cystic Fibrosis Alliance for Research and Innovative Advancements">
       </div>
     </div>
   </section>
@@ -70,16 +70,16 @@
             <span class="card__num">Section 1</span>
             <h3>Background on Cystic Fibrosis</h3>
             <p>What CF is, how it is inherited, and why it makes airway mucus thick and hard to clear.</p>
-            <span class="card__go">Read the background →</span>
+            <span class="card__go">Read the background</span>
           </a>
         </li>
 
         <li>
-          <a class="card" href="misdiagnosis/">
+          <a class="card" href="missed-diagnosis/">
             <span class="card__num">Section 2</span>
-            <h3>Misdiagnosis in India</h3>
+            <h3>Missed Diagnosis in India</h3>
             <p>Why CF is routinely missed in India, what it gets mistaken for, and what to ask for.</p>
-            <span class="card__go">Read about misdiagnosis &rarr;</span>
+            <span class="card__go">Read about missed diagnosis</span>
           </a>
         </li>
 
@@ -88,7 +88,7 @@
             <span class="card__num">Section 3</span>
             <h3>How the Device Works</h3>
             <p>Sweat tests, drug delivery, and step-by-step descriptions of patch mechanics.</p>
-            <span class="card__go">Open the device guide →</span>
+            <span class="card__go">Open the device guide</span>
           </a>
         </li>
 
@@ -97,7 +97,7 @@
             <span class="card__num">Section 4</span>
             <h3>Treatment</h3>
             <p>What happens after diagnosis: treatment options, daily routines, and what the patch could change.</p>
-            <span class="card__go">Explore treatment →</span>
+            <span class="card__go">Explore treatment</span>
           </a>
         </li>
 
@@ -106,7 +106,7 @@
             <span class="card__num">Section 5</span>
             <h3>Regional Resources &amp; Support</h3>
             <p>Care centres, patient groups, and clinical guidance for India, China, and worldwide.</p>
-            <span class="card__go">Find support near you →</span>
+            <span class="card__go">Find support near you</span>
           </a>
         </li>
 
@@ -150,12 +150,15 @@
         patients, and must not be used to diagnose or treat cystic fibrosis. Always confirm
         changes to your treatment with your care team.</p>
     </div>
-    <p class="footer-note">
-      <strong>CF Device</strong> — a static, no-tracking information site.
+    <div class="footer-brand">
+      <img class="footer-logo" src="assets/img/cf-aria.png" width="219" height="168" alt="">
+      <p class="footer-note">
+      <strong>CF-ARIA</strong> — a static, no-tracking information site.
       Created by the Georgetown Nanoscience and Microtechnology Laboratory (GNuLab),
       Department of Physics, Georgetown University.
       Last reviewed: <time datetime="2026-07-28">28 July 2026</time>.
-    </p>
+      </p>
+    </div>
   </div>
 </footer>
 

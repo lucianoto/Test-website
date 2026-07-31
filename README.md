@@ -1,4 +1,4 @@
-# CF Device Guide
+# CF-ARIA Guide
 
 A static instructional site explaining cystic fibrosis and how to use and care for a
 CF airway device. No backend, no build step, no JavaScript.
@@ -23,7 +23,7 @@ extension:
 ```
 index.html                 →  /                Home
 background/index.html      →  /background/     Background on Cystic Fibrosis
-misdiagnosis/index.html    →  /misdiagnosis/   Misdiagnosis of CF in India
+missed-diagnosis/index.html    →  /missed-diagnosis/   Missed Diagnosis of CF in India
 device/index.html          →  /device/         How the Device Works    (placeholder)
 treatment/index.html       →  /treatment/      Treatment
 resources/index.html       →  /resources/      Regional Resources & Support
@@ -125,7 +125,7 @@ paths in `404.html` are the only ones that must be updated.**
 - [ ] **`resources/`** — still missing named Indian CF clinics with current contact
       details, and Chinese-language patient-facing resources.
 - [ ] **Content overlap** — TB misattribution, mutation spectrum, and genetic panel
-      limits are covered on `misdiagnosis/`, `resources/`, and `background/`. Decide
+      limits are covered on `missed-diagnosis/`, `resources/`, and `background/`. Decide
       whether `resources/` should shed its clinical context and be purely a directory.
 - [ ] **Symbol removal** — a pass to strip logos, emojis, and symbols was started and
       deferred. Outstanding: the lungs emoji favicon on every page, the arrows in
