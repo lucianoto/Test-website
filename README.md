@@ -1,7 +1,7 @@
-# CF-ARIA Guide
+# CF-ARIA
 
-A static instructional site explaining cystic fibrosis and how to use and care for a
-CF airway device. No backend, no build step, no JavaScript.
+A static site about cystic fibrosis and the CF-ARIA transdermal patch, with separate
+sections for patients and for clinicians. No backend, no build step, no JavaScript.
 
 ## Stack
 
@@ -21,20 +21,19 @@ Each page is a directory containing `index.html`, so URLs have no `.html`
 extension:
 
 ```
-index.html                 →  /                Home
-background/index.html      →  /background/     Background on Cystic Fibrosis
-missed-diagnosis/index.html    →  /missed-diagnosis/   Missed Diagnosis of CF in India
-device/index.html          →  /device/         How the Device Works    (placeholder)
-treatment/index.html       →  /treatment/      Treatment
-resources/index.html       →  /resources/      Regional Resources & Support
-404.html                   →  404              Served automatically by GitHub Pages
-.nojekyll                                      Skip Jekyll; publish files as-is
+index.html                    →  /                    Home
+understanding-cf/index.html   →  /understanding-cf/   Understanding Cystic Fibrosis
+missed-diagnosis/index.html   →  /missed-diagnosis/   Missed Diagnosis of CF in India
+for-patients/index.html       →  /for-patients/       For Patients and Families
+for-clinicians/index.html     →  /for-clinicians/     For Clinicians
+404.html                      →  404                  Served automatically by GitHub Pages
+.nojekyll                                             Skip Jekyll; publish files as-is
 assets/css/style.css
-assets/img/                                    (empty — for photographs)
+assets/img/cf-aria.png                                Logo, used in the hero and footer
 ```
 
-Requesting `/background` without the trailing slash returns a 301 to
-`/background/`. That is GitHub Pages' behaviour for directory URLs and is not
+Requesting `/for-patients` without the trailing slash returns a 301 to
+`/for-patients/`. That is GitHub Pages' behaviour for directory URLs and is not
 configurable — the canonical URL always ends in a slash.
 
 ## Local preview
@@ -97,8 +96,8 @@ difference from the Cloudflare setup.
 ### Note on paths
 
 Every page except `404.html` uses **relative** paths — `assets/css/style.css`
-and `background/` from the root page, `../assets/css/style.css` and
-`../background/` from a subdirectory. Because every page sits exactly one level
+and `for-patients/` from the root page, `../assets/css/style.css` and
+`../for-patients/` from a subdirectory. Because every page sits exactly one level
 deep, `../` is uniform. This survives a repo rename or a move to a custom
 domain with no edits.
 
@@ -110,32 +109,39 @@ paths in `404.html` are the only ones that must be updated.**
 
 ## Still to do
 
-- [ ] **`device/`** — the only page still without content. Needs the patch's
-      technical description, wear protocol, and validation data. Everything below
-      the development-status callout was cleared for rewriting.
+-- [ ] **"How CF-ARIA Works"** — blank on both `for-patients/` and `for-clinicians/`,
+      showing "Coming soon". Needs the technical description from the laboratory:
+      sensing mechanism, materials, wear protocol, readout.
 - [ ] **Regulatory wording** — the site says "not approved for clinical use". If the
       device is under an FDA Investigational Device Exemption, the required label is
       more specific: "CAUTION — Investigational device. Limited by Federal law to
       investigational use." Confirm with whoever handles regulatory at GNuLab.
 - [ ] **Clinical review** — no page on this site has been reviewed by a clinician.
-      Most important for `treatment/`, which a reader might act on.
-- [ ] **Images** — `assets/img/` is empty. Three reserved slots await files: the hero
-      photograph on `index.html` and two on `background/`. The SVG diagrams in
-      `background/` are original; any photographs must be licensed for reuse.
-- [ ] **`resources/`** — still missing named Indian CF clinics with current contact
-      details, and Chinese-language patient-facing resources.
+      Most important for the Treatment part of `for-patients/`, which a reader might
+      act on, and for the Evidence section of `for-clinicians/`.
+- [ ] **Clinician wording** — unifying the two development-status callouts dropped a
+      sentence the clinician page carried: "Nothing on this page describes a device you
+      can currently order or deploy in clinical practice." Decide whether it returns.
+- [ ] **Logo file** — `assets/img/cf-aria.png` is 219x168 with no alpha channel, so it
+      carries a baked-in white background. Both placements work around that with white
+      plates. A transparent PNG or SVG at higher resolution would remove the need and
+      stay sharp on retina.
+- [ ] **Images** — three reserved slots await files: the hero photograph on
+      `index.html` and two on `understanding-cf/`. The SVG diagrams there are original;
+      any photographs must be licensed for reuse.
+- [ ] **India resources** — still missing named CF clinics with current contact details.
 - [ ] **Content overlap** — TB misattribution, mutation spectrum, and genetic panel
-      limits are covered on `missed-diagnosis/`, `resources/`, and `background/`. Decide
-      whether `resources/` should shed its clinical context and be purely a directory.
+      limits are covered on both `missed-diagnosis/` and the Resources part of
+      `for-patients/`.
 - [ ] **Symbol removal** — a pass to strip logos, emojis, and symbols was started and
-      deferred. Outstanding: the lungs emoji favicon on every page, the arrows in
-      `.card__go` links and the `a[rel~="external"]` rule, the middle dot in the
-      inheritance diagram, and three CSS-drawn marks (hamburger bars, the clinical
-      disclosure square, the status-flag dot). Undecided: whether the arrows inside
-      the SVG diagrams count, since they carry meaning.
+      deferred. Outstanding: the lungs emoji favicon on every page, the middle dot in
+      the inheritance diagram, and three CSS-drawn marks (hamburger bars, the clinical
+      disclosure square, the status-flag dot). The link arrows were removed already.
+      Undecided: whether the arrows inside the SVG diagrams count, since they carry
+      meaning.
 - [ ] **Cleaning guidance** — the dedicated cleaning page was removed early on.
       Recoverable from commit `b01ec36` (`git show b01ec36:cleaning.html`).
-- [ ] **Repo name** — still `Test-website`, which appears in the public URL. Renaming
+ [ ] **Repo name** — still `Test-website`, which appears in the public URL. Renaming
       requires updating the absolute paths in `404.html`.
 
 ## Content notes
