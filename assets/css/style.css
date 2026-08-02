@@ -406,6 +406,67 @@ main { display: block; padding-bottom: 5rem; }
 section { scroll-margin-top: calc(var(--bar) + 1rem); padding-top: 3.25rem; }
 section > h2 { padding-top: .9rem; border-top: 3px solid var(--fill); max-width: 22ch; }
 
+/* Pointer band on the home page, aimed at the audience the hero does not
+   address. Uses the green accent so it reads as a departure from the
+   navy-led page furniture. */
+.audience-band {
+  margin: 2.5rem 0 0;
+  padding: 1.1rem 1.3rem;
+  background: var(--bg-2);
+  border-left: 6px solid var(--accent);
+}
+.audience-band p { margin: 0; max-width: 68ch; font-size: .97rem; }
+.audience-band strong { color: var(--ink); }
+.audience-band a { font-weight: 700; white-space: nowrap; }
+
+/* --- Combined audience pages --------------------------------------------- */
+/* For Patients and For Clinicians group several former pages under one roof,
+   so they need a heading level above the old one. .part is the top-level
+   divider; inside .part-body, h3 and h4 take over the roles h2 and h3 played
+   when these sections were separate pages. */
+
+.part {
+  font-size: clamp(1.8rem, 1.35rem + 2vw, 2.6rem);
+  letter-spacing: -.032em;
+  line-height: 1.05;
+  max-width: none;
+  padding-top: 1.1rem;
+  margin-top: 1rem;
+  border-top: 6px solid var(--fill);
+}
+
+.part-body > h3,
+.part-body > section > h3 {
+  font-size: clamp(1.3rem, 1.1rem + .85vw, 1.7rem);
+  letter-spacing: -.02em;
+  line-height: 1.12;
+  max-width: 24ch;
+  margin-top: 2.75rem;
+  padding-top: .85rem;
+  border-top: 2px solid var(--rule-2);
+}
+.part-body > section:first-of-type > h3,
+.part-body > h3:first-child { margin-top: 1.75rem; }
+
+.part-body h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -.012em;
+  line-height: 1.25;
+  text-transform: none;
+  color: var(--ink);
+  margin-top: 1.9rem;
+  margin-bottom: .5em;
+}
+.part-body .steps h4,
+.part-body .card h4,
+.part-body .placeholder h4 { margin-top: 0; }
+
+/* Sections inside a part no longer need their own top rule. */
+.part-body section { padding-top: 0; }
+.part-body section > h3 { border-top: 2px solid var(--rule-2); }
+.part-body .region > h3 { border-top: 0; padding-top: 0; }
+
 /* --- Cards: a hard grid of bordered cells -------------------------------- */
 
 .card-grid {
@@ -417,13 +478,15 @@ section > h2 { padding-top: .9rem; border-top: 3px solid var(--fill); max-width:
 /* Because the cards are hard-bordered, a part-filled final row reads as a
    missing cell rather than as whitespace. On a six-column base every row holds
    three cards; where the count would leave a short last row, those cards widen
-   to close it. Counts that need help: 2, 5 and 8. */
+   to close it. Counts that need help: 2, 4, 5 and 8. */
 @media (min-width: 58rem) {
   .card-grid--fill { grid-template-columns: repeat(6, 1fr); }
   .card-grid--fill > li { grid-column: span 2; }
 
   .card-grid--fill > li:first-child:nth-last-child(2),
   .card-grid--fill > li:first-child:nth-last-child(2) ~ li,
+  .card-grid--fill > li:first-child:nth-last-child(4),
+  .card-grid--fill > li:first-child:nth-last-child(4) ~ li,
   .card-grid--fill > li:first-child:nth-last-child(5) ~ li:nth-child(n+4),
   .card-grid--fill > li:first-child:nth-last-child(8) ~ li:nth-child(n+7) {
     grid-column: span 3;
