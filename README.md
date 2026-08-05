@@ -7,7 +7,7 @@ sections for patients and for clinicians. No backend, no build step, no JavaScri
 
 Plain HTML and one CSS file. That is the whole thing.
 
-- **No JavaScript.** Interactive behaviour uses native HTML: `<details>` for the
+- **No JavaScript.** Interactive behavior uses native HTML: `<details>` for the
   expandable clinical-detail panels, and a nav bar that wraps instead of collapsing
   into a hamburger.
 - **No external requests.** No CDNs, no web fonts, no analytics, no cookies. The
@@ -33,7 +33,7 @@ assets/img/cf-aria.png                                Logo, used in the hero and
 ```
 
 Requesting `/for-patients` without the trailing slash returns a 301 to
-`/for-patients/`. That is GitHub Pages' behaviour for directory URLs and is not
+`/for-patients/`. That is GitHub Pages' behavior for directory URLs and is not
 configurable — the canonical URL always ends in a slash.
 
 ## Local preview

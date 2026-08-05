@@ -23,7 +23,7 @@
   --rule:    #0c1420;
   --rule-2:  #cbd5e1;
 
-  --blue:    #1c477d;   /* logo wordmark navy — the structural colour */
+  --blue:    #1c477d;   /* logo wordmark navy — the structural color */
   --blue-2:  #13416f;
   --blue-bg: #e8eff7;
 
@@ -653,7 +653,7 @@ figcaption {
   color: var(--ink-3);
 }
 
-/* Diagram colour hooks, so inline SVG follows light/dark automatically. */
+/* Diagram color hooks, so inline SVG follows light/dark automatically. */
 .dg-surface { fill: var(--bg-2); }
 .dg-line    { stroke: var(--ink-3); }
 .dg-ink     { fill: var(--ink); }
