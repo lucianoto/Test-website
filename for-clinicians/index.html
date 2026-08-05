@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>For Clinicians — CF-ARIA</title>
-<meta name="description" content="CF-ARIA for clinicians: intended use, validation approach against sweat chloride testing, common questions, and how to get involved. Research prototype; not approved for clinical use.">
+<meta name="description" content="CF-ARIA for clinicians: what delayed diagnosis costs, when to suspect cystic fibrosis, how sweat chloride testing works in practice, and how CF-ARIA is being validated against it. Research prototype; not approved for clinical use.">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫁</text></svg>">
 </head>
@@ -37,12 +37,174 @@
     <div class="page-head">
       <span class="eyebrow">Section 4</span>
       <h1>For Clinicians</h1>
-      <p class="lede">What CF-ARIA is intended to do, how it will be validated against sweat
-        chloride testing, what it does not yet demonstrate, and how to get involved.</p>
+      <p class="lede">What delayed diagnosis costs, when cystic fibrosis is worth considering,
+        how sweat chloride testing performs in practice, and how CF-ARIA is being validated
+        against it.</p>
     </div>
 
     <!-- =================================================================
-         PART 1: HOW CF-ARIA WORKS
+         PART 1: THE CLINICAL COST OF DELAYED DIAGNOSIS
+         ================================================================= -->
+    <section id="cost-of-delay" aria-labelledby="cost-heading">
+      <h2 class="part" id="cost-heading">The Clinical Cost of Delayed Diagnosis</h2>
+
+      <div class="part-body">
+
+        <p>Cystic fibrosis is identified later in India than in most high-income countries. The
+          reasons are structural rather than clinical. CF is uncommon, it presents like conditions
+          that are far more prevalent, and the two tests that settle the question, sweat chloride
+          measurement and CFTR sequencing, are concentrated in a small number of tertiary
+          centres.<span class="ref"><a href="#src-9">9</a></span></p>
+
+        <p>The diagnoses reached first are usually the reasonable ones to reach first. A child
+          with chronic cough, chest radiograph changes, and poor weight gain in a setting where
+          tuberculosis and malnutrition are common is being assessed sensibly when those are
+          considered. What follows is not an argument that the condition is being overlooked
+          through inattention. It is an account of what the delay costs, because that cost is what
+          makes earlier detection worth pursuing.</p>
+
+        <h3>Where the timeline sits</h3>
+
+        <p>The median age at diagnosis in India falls between roughly two and ten and a half
+          years, depending on the cohort. The comparable figures are about 2.6 months in the
+          United States and 3.6 months in Europe, where newborn screening operates
+          nationally.<span class="ref"><a href="#src-4">4</a></span> That gap is largely a
+          function of screening infrastructure: without an immunoreactive trypsinogen programme,
+          every diagnosis depends on someone considering CF and being able to test for it.</p>
+
+        <h3>What has usually happened by the time CF is confirmed</h3>
+
+        <p>Children diagnosed late frequently present with complications that are themselves
+          serious, and that earlier treatment would have largely
+          prevented:<span class="ref"><a href="#src-6">6</a></span><span class="ref"><a href="#src-7">7</a></span></p>
+
+        <ul>
+          <li><strong>Pseudo-Bartter syndrome.</strong> Hypochloraemic, hypokalaemic metabolic
+            alkalosis from salt loss through sweat, which in hot weather can be the presenting
+            emergency.</li>
+          <li><strong>Advanced malnutrition.</strong> Hypoproteinaemia with oedema, anaemia, and
+            deficiency of the fat-soluble vitamins, reflecting years of unreplaced pancreatic
+            enzyme deficiency.</li>
+          <li><strong>Established airway infection.</strong> Chronic <em>Pseudomonas aeruginosa</em>
+            colonisation already present at the point of diagnosis, after years without airway
+            clearance.</li>
+        </ul>
+
+        <div class="callout">
+          <span class="callout__title">The point that matters most clinically</span>
+          <p>Delay does not simply postpone treatment. It removes options that were available
+            earlier.</p>
+          <p>First isolation of <em>Pseudomonas aeruginosa</em> can frequently be eradicated with
+            an early antibiotic course. Once infection becomes chronic and mucoid, eradication is
+            rarely achievable and management shifts permanently to
+            suppression.<span class="ref"><a href="#src-3">3</a></span> A diagnosis made after
+            that transition has lost a window that does not reopen. The same applies to
+            bronchiectasis, which is structural and irreversible, and to nutritional status, which
+            is closely tied to long-term lung function.</p>
+        </div>
+
+        <p>The stakes are measurable. In one Indian series of infants with confirmed CF, 41
+          percent had died, at a median age of five
+          months.<span class="ref"><a href="#src-5">5</a></span> Cystic fibrosis is treatable, and
+          much of what makes it lethal early is time spent untreated.</p>
+
+        <p>This is the case for improving access to diagnosis. It is not a case against the
+          clinicians working without that access.</p>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         PART 2: WHEN TO SUSPECT CF
+         ================================================================= -->
+    <section id="when-to-suspect" aria-labelledby="suspect-heading">
+      <h2 class="part" id="suspect-heading">When to Suspect CF</h2>
+
+      <div class="part-body">
+
+        <p>This section is useful whether or not CF-ARIA ever reaches clinical use. These are the
+          presentations in which cystic fibrosis is worth adding to the differential, drawn from
+          Indian cohort data rather than from Western case
+          series.<span class="ref"><a href="#src-6">6</a></span><span class="ref"><a href="#src-7">7</a></span></p>
+
+        <div class="table-scroll">
+          <table>
+            <caption>Presentations in which CF is worth considering</caption>
+            <thead>
+              <tr>
+                <th scope="col">System</th>
+                <th scope="col">Presentation</th>
+                <th scope="col">Why it points toward CF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Respiratory</th>
+                <td>Recurrent pneumonia, persistent productive cough, bronchiectasis without an
+                  identified cause, chronic sinusitis, nasal polyps in a child</td>
+                <td>Impaired mucociliary clearance produces repeated infection in the same
+                  territory. Nasal polyps in a child are uncommon enough to warrant investigation
+                  on their own.</td>
+              </tr>
+              <tr>
+                <th scope="row">Gastrointestinal</th>
+                <td>Failure to thrive despite adequate intake, bulky greasy stools, meconium ileus
+                  in a newborn, rectal prolapse, hypoproteinaemia with oedema</td>
+                <td>Pancreatic insufficiency prevents absorption regardless of what is eaten,
+                  which is why nutritional intervention alone does not correct it.</td>
+              </tr>
+              <tr>
+                <th scope="row">Metabolic</th>
+                <td>Hypochloraemic hypokalaemic metabolic alkalosis, salt-loss crisis in hot
+                  weather, unusually salty skin</td>
+                <td>Excess sweat electrolyte loss is close to specific for CF and is the basis of
+                  the diagnostic test itself.</td>
+              </tr>
+              <tr>
+                <th scope="row">Adult presentation</th>
+                <td>Unexplained bronchiectasis with sinus disease, pancreatic insufficiency, or
+                  male infertility</td>
+                <td>Milder genotypes present in adolescence or adulthood and are frequently
+                  attributed to idiopathic bronchiectasis.</td>
+              </tr>
+              <tr>
+                <th scope="row">Family history</th>
+                <td>Consanguinity, unexplained infant deaths in siblings, a sibling with similar
+                  respiratory or nutritional problems</td>
+                <td>Autosomal recessive inheritance means affected siblings are common and
+                  carriers are silent.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--ok">
+          <span class="callout__title">Treatment response is diagnostic information</span>
+          <p>The most reliable signal is not the initial presentation, which is genuinely
+            ambiguous, but what happens next. Severe malnutrition that does not improve with
+            adequate nutritional therapy, or a respiratory picture that does not respond to a full
+            course of anti-tubercular treatment, is itself evidence that the working diagnosis is
+            incomplete.</p>
+          <p>Indian paediatricians surveyed on this identified the same three triggers: severe
+            malnutrition unresponsive to nutritional therapy, meconium ileus in a newborn, and
+            recurrent pneumonia.<span class="ref"><a href="#src-8">8</a></span> The clinical
+            instinct is already widely shared. What has been missing is convenient access to the
+            test that resolves it.</p>
+        </div>
+
+        <h3>A note on genetic testing</h3>
+
+        <p>If a targeted CFTR panel returns negative in a patient whose clinical picture still
+          fits, that result does not exclude cystic fibrosis. Commercial panels are built around
+          variants common in European populations, and F508del accounts for a substantially
+          smaller share of alleles in Indian cohorts. Sweat chloride testing remains central, and
+          extended sequencing may be required.<span class="ref"><a href="#src-9">9</a></span></p>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         PART 3: HOW CF-ARIA WORKS
          ================================================================= -->
     <section id="how-it-works" aria-labelledby="how-heading">
       <h2 class="part" id="how-heading">How CF-ARIA Works</h2>
@@ -58,10 +220,10 @@
     </section>
 
     <!-- =================================================================
-         PART 2: EVIDENCE
+         PART 4: SWEAT TESTING AND EVIDENCE
          ================================================================= -->
     <section id="evidence" aria-labelledby="evidence-heading">
-      <h2 class="part" id="evidence-heading">Evidence</h2>
+      <h2 class="part" id="evidence-heading">Sweat Testing and Evidence</h2>
 
       <div class="part-body">
 
@@ -78,65 +240,39 @@
         <p>Those numbers matter for two reasons. They are what a transdermal device must agree
           with, and the intermediate band is where agreement is hardest and most consequential.</p>
 
-        <h3>What validation has to establish</h3>
+        <h3>Sweat testing in practice</h3>
 
-        <p>The following is the standard CF-ARIA is being held to. Presenting it before results
-          exist is deliberate: it states in advance what would count as success, so that later
-          data can be judged against a fixed target rather than a moving one.</p>
+        <p>The procedure itself is well established. Pilocarpine is driven into a small area of
+          skin by a low-level current, stimulating local sweat production; sweat is collected over
+          roughly thirty minutes onto gauze or into a coil, and chloride is quantified in the
+          laboratory.<span class="ref"><a href="#src-1">1</a></span><span class="ref"><a href="#src-2">2</a></span></p>
 
-        <div class="table-scroll">
-          <table>
-            <caption>Validation requirements and current status</caption>
-            <thead>
-              <tr>
-                <th scope="col">What must be shown</th>
-                <th scope="col">Why it matters</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Analytical accuracy</th>
-                <td>Agreement between the device's chloride measurement and paired laboratory
-                  values, reported as Bland-Altman limits of agreement rather than correlation
-                  alone. Correlation can look excellent while agreement is clinically unusable.</td>
-                <td>In progress</td>
-              </tr>
-              <tr>
-                <th scope="row">Diagnostic performance</th>
-                <td>Sensitivity, specificity, and predictive values against quantitative
-                  pilocarpine iontophoresis, reported separately for the intermediate
-                  30 to 59&nbsp;mmol/L band where misclassification is most likely.</td>
-                <td>In progress</td>
-              </tr>
-              <tr>
-                <th scope="row">Adequate sample rate</th>
-                <td>The proportion of attempts yielding sufficient sweat, particularly in infants,
-                  where insufficient volume is the dominant failure mode of conventional sweat
-                  testing.</td>
-                <td>In progress</td>
-              </tr>
-              <tr>
-                <th scope="row">Reproducibility</th>
-                <td>Agreement between repeated measurements on the same subject, and between
-                  operators with differing levels of training.</td>
-                <td>In progress</td>
-              </tr>
-              <tr>
-                <th scope="row">Performance in the target setting</th>
-                <td>Results obtained under the ambient temperature, humidity, and staffing
-                  conditions the device is intended for, not only under laboratory conditions.</td>
-                <td>Not yet started</td>
-              </tr>
-              <tr>
-                <th scope="row">Skin safety</th>
-                <td>Rates of irritation, contact dermatitis, and adverse skin events, including in
-                  infants.</td>
-                <td>In progress</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p>Three requirements govern whether a result is usable, and each is a point at which the
+          test becomes difficult to deliver outside a specialist centre.</p>
+
+        <ul>
+          <li><strong>Sufficient sweat.</strong> Guidelines specify minimum collected quantities,
+            commonly cited as at least 75&nbsp;mg on gauze or filter paper, or at least
+            15&nbsp;microlitres by coil, together with an adequate sweat
+            rate.<span class="ref"><a href="#src-1">1</a></span><span class="ref"><a href="#src-2">2</a></span>
+            Insufficient quantity is the dominant failure mode, and it is most frequent in
+            neonates and small infants: precisely the group in whom early diagnosis matters
+            most.</li>
+          <li><strong>A trained operator.</strong> Collection technique materially affects the
+            result, and both evaporation and contamination can produce falsely elevated
+            values.<span class="ref"><a href="#src-2">2</a></span></li>
+          <li><strong>Sustained volume.</strong> Guidelines recommend that laboratories perform a
+            minimum number of tests annually to maintain proficiency, which is why low-volume
+            sites produce results more likely to need
+            repeating.<span class="ref"><a href="#src-1">1</a></span></li>
+        </ul>
+
+        <p>Taken together, these requirements explain the geography. Equipment, consumables,
+          trained staff, and enough throughput to stay proficient represent a standing
+          institutional commitment, which is why sweat testing clusters in tertiary centres and
+          why families elsewhere face distance and cost to reach
+          it.<span class="ref"><a href="#src-9">9</a></span> The constraint is access, not the
+          test.</p>
 
         <div class="callout callout--warn">
           <span class="callout__title">What CF-ARIA does not yet demonstrate</span>
@@ -145,104 +281,103 @@
             objective, not as a demonstrated result.</p>
         </div>
 
-        <h3>Where results will appear</h3>
-
-        <p>Publications, conference presentations, and trial registrations will be listed here as
-          they become available, so that the evidence base can be inspected directly rather than
-          summarised.</p>
-
       </div>
     </section>
 
     <!-- =================================================================
-         PART 3: COMMON QUESTIONS
+         PART 5: HOW THE OPTIONS COMPARE
          ================================================================= -->
-    <section id="questions" aria-labelledby="questions-heading">
-      <h2 class="part" id="questions-heading">Common Questions</h2>
+    <section id="comparison" aria-labelledby="comparison-heading">
+      <h2 class="part" id="comparison-heading">How the Options Compare</h2>
 
       <div class="part-body">
 
-        <p>These are the objections we expect, and the honest answers to them at the current stage
-          of development.</p>
+        <p>Where CF-ARIA is intended to sit relative to the two established tests.</p>
 
-        <details class="clinical">
-          <summary>Sweat chloride testing already works. Why does this need to exist?</summary>
-          <div class="clinical__body">
-            <p>It does work, and CF-ARIA is not proposed as a replacement for it where it is
-              available. The gap is geographic and economic rather than technical. Quantitative
-              pilocarpine iontophoresis needs equipment, consumables, and trained staff, and is
-              concentrated in a small number of tertiary centres. In one survey of Indian
-              paediatricians, 90 percent reported having no access to sweat chloride testing or
-              genetic studies, and 87.5 percent said that unavailability made diagnosing CF
-              difficult.<span class="ref"><a href="#src-3">3</a></span></p>
-            <p>If a patient can reach a centre that performs sweat testing regularly, that test
-              remains the right one.</p>
-          </div>
-        </details>
-
-        <details class="clinical">
-          <summary>Where would this sit in a diagnostic pathway?</summary>
-          <div class="clinical__body">
-            <p>The intended position is <strong>triage rather than confirmation</strong>: a test
-              that can be performed outside a specialist laboratory to identify who warrants
-              referral for formal sweat testing and genetic analysis. On that model a positive
-              result initiates a diagnostic pathway; it does not conclude one.</p>
-            <p>This is a lower evidentiary bar than replacing the reference standard, and it is a
-              more realistic claim. Whether the data supports even that is what validation has to
-              determine.</p>
-          </div>
-        </details>
-
-        <details class="clinical">
-          <summary>What happens if the result is wrong?</summary>
-          <div class="clinical__body">
-            <p>The two errors carry different costs. A <strong>false negative</strong> returns a
-              patient to the diagnostic delay the device exists to shorten, which is the more
-              serious failure given that undiagnosed CF in this population frequently presents
-              later with advanced malnutrition, pseudo-Bartter syndrome, or established
-              <em>Pseudomonas</em> colonisation.<span class="ref"><a href="#src-4">4</a></span></p>
-            <p>A <strong>false positive</strong> generates referral, anxiety, and a confirmatory
-              test that will correct it. In a triage model that is the tolerable error, which is
-              why threshold selection should favour sensitivity over specificity. Quantifying both
-              is part of validation.</p>
-          </div>
-        </details>
-
-        <details class="clinical">
-          <summary>How much training and time does it require?</summary>
-          <div class="clinical__body">
-            <p>Application time, wear duration, and the training required to obtain a reliable
-              result are part of the technical specification and will be stated once the
-              laboratory has finalised the protocol. Workflow burden is a legitimate reason to
-              reject a diagnostic, and it will be documented rather than glossed over.</p>
-          </div>
-        </details>
-
-        <details class="clinical">
-          <summary>Is this a CFTR modulator eligibility test, or a diagnostic?</summary>
-          <div class="clinical__body">
-            <p>A diagnostic. Sweat chloride does fall measurably on modulator therapy, which makes
-              serial measurement an interesting secondary possibility, but that is a research
-              question rather than a current claim. Modulator eligibility is determined by
-              genotype, and no sweat-based measurement substitutes for
-              sequencing.<span class="ref"><a href="#src-2">2</a></span></p>
-          </div>
-        </details>
-
-        <details class="clinical">
-          <summary>Can I use it in my clinic now?</summary>
-          <div class="clinical__body">
-            <p>No. CF-ARIA has not been approved or cleared by any regulatory authority and is not
-              available for clinical use. The routes currently open to clinicians are research
-              collaboration and providing design input, both described below.</p>
-          </div>
-        </details>
+        <div class="table-scroll">
+          <table>
+            <caption>Sweat chloride testing, CFTR sequencing, and CF-ARIA compared</caption>
+            <thead>
+              <tr>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">Sweat chloride testing</th>
+                <th scope="col">CFTR sequencing</th>
+                <th scope="col">CF-ARIA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">What it measures</th>
+                <td>Chloride concentration in stimulated sweat</td>
+                <td>Variants in the CFTR gene</td>
+                <td rowspan="6">Coming soon.</td>
+              </tr>
+              <tr>
+                <th scope="row">What it requires</th>
+                <td>Iontophoresis equipment, consumables, a trained operator, laboratory
+                  analysis</td>
+                <td>Sequencing facility or send-out, plus bioinformatic interpretation</td>
+              </tr>
+              <tr>
+                <th scope="row">Where it can be done</th>
+                <td>Specialist centres with sustained test volume</td>
+                <td>Reference laboratories, frequently by send-out</td>
+              </tr>
+              <tr>
+                <th scope="row">Main limitation</th>
+                <td>Insufficient sweat quantity, especially in infants, and geographic
+                  concentration</td>
+                <td>Targeted panels are weighted toward European variants and can miss CF in
+                  Indian patients; full sequencing is costly</td>
+              </tr>
+              <tr>
+                <th scope="row">Role in the pathway</th>
+                <td>Diagnostic standard, confirmatory</td>
+                <td>Confirmatory, and determines modulator eligibility</td>
+              </tr>
+              <tr>
+                <th scope="row">Status</th>
+                <td>Established</td>
+                <td>Established</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
       </div>
     </section>
 
     <!-- =================================================================
-         PART 4: GET INVOLVED
+         PART 6: ABOUT GNuLab
+         ================================================================= -->
+    <section id="about-gnulab" aria-labelledby="gnulab-heading">
+      <h2 class="part" id="gnulab-heading">About GNuLab</h2>
+
+      <div class="part-body">
+
+        <p>CF-ARIA is being developed at the Georgetown Nanoscience and Microtechnology
+          Laboratory (GNuLab), also known as the Paranjape Lab, in the Department of Physics at
+          Georgetown University. It is directed by Makarand (Mak) Paranjape, Associate Professor
+          of Physics.</p>
+
+        <p>The laboratory works on functional microscale sensors, non-invasive transdermal
+          diagnostic patches, and biomedical microdevices. CF-ARIA sits within an established line
+          of work rather than being a departure from it: other projects include glucose sensors,
+          neural probes, MRI contrast agents, and carbon nanotube sensors for gas monitoring and
+          diabetes.</p>
+
+        <p>GNuLab occupies a 3,300 square foot shared-use clean room in Regents Hall, equipped for
+          the fabrication and characterisation of materials and electronic devices. It is open to
+          researchers across the Georgetown University Main Campus and Medical Center as well as
+          to external collaborators, who are trained and supported in their work by
+          Dr.&nbsp;Jasper Nijdam. Projects are led by faculty research groups and carried out by
+          postdoctoral fellows alongside graduate, undergraduate, and high-school students.</p>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         PART 7: GET INVOLVED
          ================================================================= -->
     <section id="get-involved" aria-labelledby="involved-heading">
       <h2 class="part" id="involved-heading">Get Involved</h2>
@@ -259,13 +394,18 @@
       <p>Numbered markers in the text link to the entries below.</p>
       <ol>
         <li id="src-1"><a href="https://www.cff.org/medical-professionals/sweat-test-clinical-care-guidelines" rel="external noopener" target="_blank">Sweat test clinical care guidelines (Cystic Fibrosis Foundation)</a></li>
-        <li id="src-2"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11662431/" rel="external noopener" target="_blank">Diagnosing cystic fibrosis in low- and middle-income countries: challenges and strategies</a></li>
-        <li id="src-3"><a href="https://www.researchgate.net/publication/288745750_Cystic_fibrosis_Are_we_missing_the_diagnosis_in_India" rel="external noopener" target="_blank">Cystic fibrosis: are we missing the diagnosis in India? Survey of paediatricians in Pune, Maharashtra</a></li>
-        <li id="src-4"><a href="https://doi.org/10.1002/ppul.20677" rel="external noopener" target="_blank">Kabra SK, Kabra M, Lodha R, Shastri S. Cystic fibrosis in India. Pediatric Pulmonology, 2007; 42(12): 1087 to 1094</a></li>
+        <li id="src-2"><a href="https://www.ncbi.nlm.nih.gov/books/NBK547728/" rel="external noopener" target="_blank">Sweat testing (StatPearls, NCBI Bookshelf)</a></li>
+        <li id="src-3"><a href="https://www.cff.org/medical-professionals/clinical-care-guidelines" rel="external noopener" target="_blank">Clinical care guidelines, full index (Cystic Fibrosis Foundation)</a></li>
+        <li id="src-4"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12015907/" rel="external noopener" target="_blank">India: the last and best frontier for cystic fibrosis newborn screening, with perspectives on special challenges</a></li>
+        <li id="src-5"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12452779/" rel="external noopener" target="_blank">Exceptionally high cystic fibrosis-related morbidity and mortality in infants and young children in India</a></li>
+        <li id="src-6"><a href="https://doi.org/10.1002/ppul.20677" rel="external noopener" target="_blank">Kabra SK, Kabra M, Lodha R, Shastri S. Cystic fibrosis in India. Pediatric Pulmonology, 2007; 42(12): 1087 to 1094</a></li>
+        <li id="src-7"><a href="https://onlinelibrary.wiley.com/doi/10.1111/jpc.70420" rel="external noopener" target="_blank">Clinical profile of cystic fibrosis in India: a multi-centric prospective study, Journal of Paediatrics and Child Health</a></li>
+        <li id="src-8"><a href="https://www.researchgate.net/publication/288745750_Cystic_fibrosis_Are_we_missing_the_diagnosis_in_India" rel="external noopener" target="_blank">Cystic fibrosis: are we missing the diagnosis in India? Survey of paediatricians in Pune, Maharashtra</a></li>
+        <li id="src-9"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11662431/" rel="external noopener" target="_blank">Diagnosing cystic fibrosis in low- and middle-income countries: challenges and strategies</a></li>
       </ol>
-      <p>This page describes work in progress. Statements about intended use and validation
-        targets are design objectives rather than demonstrated results, and are marked as such
-        throughout. It has not been reviewed by a clinician (see the disclaimer below).</p>
+      <p>This page describes work in progress. Statements about CF-ARIA's intended use are design
+        objectives rather than demonstrated results, and are marked as such throughout. It has not
+        been reviewed by a clinician (see the disclaimer below).</p>
     </div>
 
   </div>
@@ -286,7 +426,7 @@
       <strong>CF-ARIA</strong> — a static, no-tracking information site.
       Created by the Georgetown Nanoscience and Microtechnology Laboratory (GNuLab),
       Department of Physics, Georgetown University.
-      Last reviewed: <time datetime="2026-08-01">1 August 2026</time>.
+      Last reviewed: <time datetime="2026-08-04">4 August 2026</time>.
       </p>
     </div>
   </div>
