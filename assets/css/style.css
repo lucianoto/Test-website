@@ -736,7 +736,7 @@ figcaption {
 .ref a { text-decoration: none; padding: 0 .08em; }
 .ref a:hover { text-decoration: underline; }
 /* Consecutive markers need separating, or "3" then "2" reads as "32". */
-.ref + .ref::before { content: ","; color: var(--ink-3); }
+.ref--seq::before { content: ","; color: var(--ink-3); }
 
 /* --- Footer -------------------------------------------------------------- */
 

@@ -22,6 +22,7 @@ extension:
 
 ```
 index.html                    →  /                    Home
+about-the-lab/index.html      →  /about-the-lab/      About the Lab (GNuLab and its director)
 understanding-cf/index.html   →  /understanding-cf/   Understanding Cystic Fibrosis
 missed-diagnosis/index.html   →  /missed-diagnosis/   Missed Diagnosis of CF in India
 for-patients/index.html       →  /for-patients/       For Patients and Families
@@ -117,8 +118,19 @@ paths in `404.html` are the only ones that must be updated.**
       more specific: "CAUTION — Investigational device. Limited by Federal law to
       investigational use." Confirm with whoever handles regulatory at GNuLab.
 - [ ] **Clinical review** — no page on this site has been reviewed by a clinician.
-      Most important for the Treatment part of `for-patients/`, which a reader might
-      act on, and for the Evidence section of `for-clinicians/`.
+      `for-clinicians/` now carries a "Not reviewed by a clinician" callout at the top,
+      but the underlying need is unchanged, and the stakes rose when that page gained
+      enzyme dosing, salt supplementation, baseline investigations, and infection-control
+      guidance. Also important for the Treatment part of `for-patients/`.
+- [ ] **Page balance** — `understanding-cf/` (~2,000 words) and `missed-diagnosis/`
+      (~1,500) are much shorter than `for-patients/` (~5,250) and `for-clinicians/`
+      (~5,100), and `missed-diagnosis/` now overlaps heavily with the clinician page's
+      delay, mimics, and genetics material. Decide whether to fold it into the audience
+      pages or trim it to a short bridge. Deferred deliberately, not forgotten.
+- [ ] **Device wording** — the "Perform the sweat test" step in `for-clinicians/` now
+      reads "CF-ARIA will soon be able to aid in the sweat test." That is a forward-looking
+      claim about a device with no published accuracy data; confirm it is one the lab wants
+      to make in writing.
 - [ ] **Clinician wording** — unifying the two development-status callouts dropped a
       sentence the clinician page carried: "Nothing on this page describes a device you
       can currently order or deploy in clinical practice." Decide whether it returns.
