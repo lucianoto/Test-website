@@ -631,6 +631,18 @@ tbody td { color: var(--ink-2); }
 /* --- Figures ------------------------------------------------------------- */
 
 figure { margin: 2.25rem 0; padding: 0; border: 1px solid var(--rule); }
+
+/* Portrait: sits beside the prose on wider screens, above it on phones.
+   Reuses the figure frame and caption bar. */
+.portrait { max-width: 15rem; margin: .5rem 0 1.75rem; }
+.portrait img { display: block; width: 100%; height: auto; }
+@media (min-width: 48rem) {
+  .portrait { float: right; width: 15rem; margin: .35rem 0 1.25rem 2.25rem; }
+}
+
+/* Keep a floated figure from escaping its part and colliding with the
+   next section's rule. */
+.part-body::after { content: ""; display: block; clear: both; }
 figure svg { display: block; width: 100%; height: auto; padding: 1.25rem; }
 figcaption {
   padding: .9rem 1.1rem;
