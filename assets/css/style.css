@@ -649,12 +649,17 @@ figure { margin: 2.25rem 0; padding: 0; border: 1px solid var(--rule); }
   color: var(--ink-2);
 }
 
-/* Portrait: sits beside the prose on wider screens, above it on phones.
-   Reuses the figure frame and caption bar. */
-.portrait { max-width: 15rem; margin: .5rem 0 1.75rem; }
-.portrait img { display: block; width: 100%; height: auto; }
+/* Figures that sit beside the prose on wider screens and above it on phones,
+   reusing the figure frame and caption bar. .portrait is sized for an upright
+   photograph, .fig-side for a landscape one. */
+.portrait, .fig-side { margin: .5rem 0 1.75rem; }
+.portrait { max-width: 15rem; }
+.fig-side { max-width: 22rem; }
+.portrait img, .fig-side img { display: block; width: 100%; height: auto; }
 @media (min-width: 48rem) {
-  .portrait { float: right; width: 15rem; margin: .35rem 0 1.25rem 2.25rem; }
+  .portrait, .fig-side { float: right; margin: .35rem 0 1.25rem 2.25rem; }
+  .portrait { width: 15rem; }
+  .fig-side { width: 22rem; }
 }
 
 /* Keep a floated figure from escaping its part and colliding with the
