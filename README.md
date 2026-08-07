@@ -22,7 +22,7 @@ extension:
 
 ```
 index.html                    →  /                    Home
-about-the-lab/index.html      →  /about-the-lab/      About the Lab (GNuLab and its director)
+who-we-are/index.html      →  /who-we-are/      About the Lab (GNuLab and its director)
 understanding-cf/index.html   →  /understanding-cf/   Understanding Cystic Fibrosis
 missed-diagnosis/index.html   →  /missed-diagnosis/   Missed Diagnosis of CF in India
 for-patients/index.html       →  /for-patients/       For Patients and Families

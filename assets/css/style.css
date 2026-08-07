@@ -303,11 +303,11 @@ main { display: block; padding-bottom: 5rem; }
   margin: 0 0 .75rem;
 }
 .hero__tagline {
-  font-size: clamp(1.05rem, .95rem + .55vw, 1.4rem);
+  font-size: clamp(.95rem, .9rem + .25vw, 1.1rem);
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.45;
   color: var(--ink-2);
-  max-width: 28ch;
+  max-width: 52ch;
   margin: 0 0 1.5rem;
   padding-left: 1rem;
   border-left: 3px solid var(--accent);
@@ -631,6 +631,23 @@ tbody td { color: var(--ink-2); }
 /* --- Figures ------------------------------------------------------------- */
 
 figure { margin: 2.25rem 0; padding: 0; border: 1px solid var(--rule); }
+
+/* --- People list -------------------------------------------------------- */
+
+.people { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.people li {
+  max-width: var(--measure);
+  padding: .8rem 0;
+  border-top: 1px solid var(--rule-2);
+}
+.people li:last-child { border-bottom: 1px solid var(--rule-2); }
+.people__name { display: block; font-weight: 700; }
+.people__where {
+  display: block;
+  margin-top: .15rem;
+  font-size: .9rem;
+  color: var(--ink-2);
+}
 
 /* Portrait: sits beside the prose on wider screens, above it on phones.
    Reuses the figure frame and caption bar. */
