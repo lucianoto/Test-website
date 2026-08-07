@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects.
+# Format: <from> <to> <status>, one rule per line, first match wins.
+
+# "About the Lab" became "Who We Are" on 2026-08-07, and the URL moved with it.
+# Both forms are listed because the splat rule only matches paths that already
+# have the trailing slash.
+/about-the-lab    /who-we-are/         301
+/about-the-lab/*  /who-we-are/:splat   301

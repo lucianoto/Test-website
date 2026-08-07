@@ -27,7 +27,8 @@ understanding-cf/index.html   →  /understanding-cf/   Understanding Cystic Fib
 missed-diagnosis/index.html   →  /missed-diagnosis/   Missed Diagnosis of CF in India
 for-patients/index.html       →  /for-patients/       For Patients and Families
 for-clinicians/index.html     →  /for-clinicians/     For Clinicians
-404.html                      →  404                  Served automatically by GitHub Pages
+404.html                      →  404                  Served for any unmatched URL
+_redirects                                            Cloudflare redirect rules
 .nojekyll                                             Skip Jekyll; publish files as-is
 assets/css/style.css
 assets/img/cf-aria.png                                Logo, used in the hero and footer
