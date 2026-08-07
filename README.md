@@ -139,9 +139,11 @@ paths in `404.html` are the only ones that must be updated.**
       carries a baked-in white background. Both placements work around that with white
       plates. A transparent PNG or SVG at higher resolution would remove the need and
       stay sharp on retina.
-- [ ] **Images** — three reserved slots await files: the hero photograph on
-      `index.html` and two on `understanding-cf/`. The SVG diagrams there are original;
-      any photographs must be licensed for reuse.
+- [ ] **Images** — the two reserved slots on `understanding-cf/` were removed; the
+      SVG diagrams there are original. Confirm the two photographs on `who-we-are/`
+      are licensed for reuse, and that the people in the laboratory shot are happy to
+      appear. The `.image-grid` and `.image-slot` styles are now unused but kept, since
+      the hero on `index.html` still reserves a slot.
 - [ ] **India resources** — still missing named CF clinics with current contact details.
 - [ ] **Content overlap** — TB misattribution, mutation spectrum, and genetic panel
       limits are covered on both `missed-diagnosis/` and the Resources part of
